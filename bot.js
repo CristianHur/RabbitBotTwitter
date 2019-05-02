@@ -8,10 +8,10 @@ const linku = require('url');
 
 //Arranque
 const T = new Twit({
-		consumer_key: 'HEROKU_VAR',
-		consumer_secret: 'HEROKU_VAR',
-		access_token: 'HEROKU_VAR',
-		access_token_secret: 'HEROKU_VAR',
+		consumer_key: process.env.consumerKey,
+		consumer_secret: process.env.consumerSecret,
+		access_token: process.env.accesstoken,
+		access_token_secret: process.env.accesstokensecret,
 		timeout_ms: 60 * 1000,
 		strictSSL: false,
 	});
