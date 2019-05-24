@@ -76,7 +76,7 @@ function EnvioReddit(res, subreddits) {
 		{
 			urla = urls;
 
-			console.log("CONSULTA REDDIT: " + urls);
+			//console.log("CONSULTA REDDIT: " + urls);
 		}
 
 	}
@@ -103,8 +103,7 @@ function descarga() {
 
 	download(urla, opcionimg, function (err) {
 		if (err) {
-			throw err
-			console.log("Error descargando imagen")
+			return console.error(err);
 		} else
 			enviar();
 	})
@@ -143,7 +142,7 @@ function enviar() {
 					}
 
 					T.post('statuses/update', params, function (err, data, response) {
-						console.log("Conejo enviado: " + urla);
+						//console.log("Conejo enviado: " + urla);
 					})
 				}
 			})
